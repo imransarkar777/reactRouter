@@ -1,3 +1,16 @@
-nav a{
-    margin-right: 10px;
+nav a {
+  margin-right: 10px;
+  padding: 20px;
+  text-decoration: none;
+}
+nav a.active {
+  text-decoration: underline;
+  background-color: aquamarine;
+}
+
+.logo {
+  display: inline-block; /* or inline */
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
 }
