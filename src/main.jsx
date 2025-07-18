@@ -11,6 +11,7 @@ import Header from "./Components/Header/Header";
 import Contact from "./Components/Contact/Contact"
 // import { children } from "react";
 // import Footer from "./Components/Footer/footer";
+import Users from "./Components/Users/Users";
 import About from "./Components/About/About";
 
 const root = document.getElementById("root");
@@ -31,11 +32,16 @@ const router = new createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>
+      },
+      {
+        path: "/users",
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+        element: <Users></Users>
+      },
+      {
+        path: '/user/1',
+        element :   
       }
-      // {
-      //   path: "/footer",
-      //   element: <Footer></Footer>
-      // },
     ]
   },
 ]);
